@@ -22,7 +22,15 @@ namespace test {
       VertexBuffer vb;
       VertexBufferLayout layout;
       IndexBuffer ib;
-      Texture* texture = nullptr;
+      Texture* catTexture = nullptr;
+      Texture* treeTexture = nullptr;
+      glm::mat4 proj;
+      glm::mat4 view;
+      glm::mat4 model;
+      glm::vec3 translationA;
+      glm::vec3 translationB;
+      glm::vec3 translationC;
+      glm::vec3 translationD;
 
       void ImGuiSetup() override;
   };

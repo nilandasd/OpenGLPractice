@@ -34,9 +34,9 @@ GLFWwindow* glInit() {
 
   fprintf(stdout, "INFO: GL version: %s\n", glGetString(GL_VERSION));
 
-  glCall( glClearColor(0.2f, 0.3f, 0.7f, 1.0f) );
-  glCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
+  glCall(glClearColor(0.2f, 0.3f, 0.7f, 1.0f));
   glCall(glEnable(GL_BLEND));
+  glCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
   return window;
 }
