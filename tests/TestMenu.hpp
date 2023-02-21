@@ -3,6 +3,7 @@
 #include "test.hpp"
 #include "ClearColorTest.hpp"
 #include "TriangleTest.hpp"
+#include "TextureTest.hpp"
 
 #include <vector>
 #include <string>

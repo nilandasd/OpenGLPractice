@@ -34,6 +34,7 @@ GLFWwindow* glInit() {
 
   fprintf(stdout, "INFO: GL version: %s\n", glGetString(GL_VERSION));
 
+  glCall( glClearColor(0.2f, 0.3f, 0.7f, 1.0f) );
   glCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
   glCall(glEnable(GL_BLEND));
 
@@ -62,6 +63,8 @@ int main() {
   initImGui(window);
 
   while (!glfwWindowShouldClose(window)) {
+    glCall( glClear(GL_COLOR_BUFFER_BIT) );
+
     testMenu.run();
 
     glfwSwapBuffers(window);

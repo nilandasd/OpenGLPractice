@@ -1,7 +1,7 @@
 #include "TestMenu.hpp"
 
 namespace test {
-  TestMenu::TestMenu() : listbox_item_current(-1), currentTest(nullptr), testNames { "Clear Color", "Triangle" } {
+  TestMenu::TestMenu() : listbox_item_current(-1), currentTest(nullptr), testNames { "Clear Color", "Triangle", "Textures" } {
   };
 
   TestMenu::~TestMenu() {
@@ -32,6 +32,7 @@ namespace test {
       const char* listbox_items[] = {
         testNames[0],
         testNames[1],
+        testNames[2],
       };
 
       switch (listbox_item_current) {
@@ -43,20 +44,12 @@ namespace test {
           currentTest = new TriangleTest();
           break;
         }
-        /*
         case 2: {
-          currentTest = new SingleTextureTest();
+          currentTest = new TextureTest();
           break;
         }
-        */
         /*
         case 3: {
-          currentTest = new MultipleTextureTest();
-          break;
-        }
-        */
-        /*
-        case 4: {
           currentTest = new CircleTest();
           break;
         }
@@ -79,7 +72,7 @@ namespace test {
 
       ImGui::End();
     } else {
-      if (ImGui::Button("<-")) {
+      if (ImGui::Button("Back")) {
         delete currentTest;
         currentTest = nullptr;
         listbox_item_current = -1;
@@ -96,5 +89,4 @@ namespace test {
     OnRender();
     ImGuiSetup();
   }
-
 }

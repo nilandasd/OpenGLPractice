@@ -17,6 +17,9 @@ OBJS = $(subst .cpp,.o, $(SRC))
 
 ALL: $(TARGET)
 
+run: spotless $(TARGET)
+	./$(TARGET)
+
 $(TARGET): $(OBJS) 
 	$(LINK) $(TARGET) *.o $(LINK_FLAGS)
 

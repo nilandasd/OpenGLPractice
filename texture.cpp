@@ -25,8 +25,8 @@ Texture::~Texture() {
 }
 
 void Texture::Bind(unsigned int slot /* = 0 */) const {
-    glCall(glActiveTexture(GL_TEXTURE0 + slot));
-    glCall(glBindTexture(GL_TEXTURE_2D, glid));
+  glCall(glActiveTexture(GL_TEXTURE0 + slot));
+  glCall(glBindTexture(GL_TEXTURE_2D, glid));
 }
 
 void Texture::Unbind() const {

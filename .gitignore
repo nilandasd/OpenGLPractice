@@ -1,3 +1,5 @@
 *.o
 engine
 engine.dSYM
+imgui.ini
+./**/.DS_Store
