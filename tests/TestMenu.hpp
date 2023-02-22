@@ -5,6 +5,7 @@
 #include "TriangleTest.hpp"
 #include "TextureTest.hpp"
 #include "CircleTest.hpp"
+#include "CubeTest.hpp"
 
 #include <vector>
 #include <string>

@@ -1,7 +1,7 @@
 #include "TestMenu.hpp"
 
 namespace test {
-  TestMenu::TestMenu() : listbox_item_current(-1), currentTest(nullptr), testNames { "Clear Color", "Triangle", "Textures", "Circle" } {
+  TestMenu::TestMenu() : listbox_item_current(-1), currentTest(nullptr), testNames { "Clear Color", "Triangle", "Textures", "Circle", "Cube" } {
   };
 
   TestMenu::~TestMenu() {
@@ -34,6 +34,7 @@ namespace test {
         testNames[1],
         testNames[2],
         testNames[3],
+        testNames[4],
       };
 
       switch (listbox_item_current) {
@@ -51,6 +52,10 @@ namespace test {
         }
         case 3: {
           currentTest = new CircleTest();
+          break;
+        }
+        case 4: {
+          currentTest = new CubeTest();
           break;
         }
       }
