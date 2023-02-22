@@ -4,6 +4,7 @@
 #include "ClearColorTest.hpp"
 #include "TriangleTest.hpp"
 #include "TextureTest.hpp"
+#include "CircleTest.hpp"
 
 #include <vector>
 #include <string>

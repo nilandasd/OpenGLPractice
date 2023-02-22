@@ -6,8 +6,8 @@ namespace test {
       indices {0, 1, 2},
       vertices {
         -0.5f, -0.4f,
-        0.6f, -0.5f,
-        0.0f,  0.4f
+         0.6f, -0.5f,
+         0.0f,  0.4f
       },
       ib(IndexBuffer(indices, 3)),
       vb(VertexBuffer(vertices, 2 * 3 * sizeof(float))),

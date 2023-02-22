@@ -1,7 +1,7 @@
 #include "TestMenu.hpp"
 
 namespace test {
-  TestMenu::TestMenu() : listbox_item_current(-1), currentTest(nullptr), testNames { "Clear Color", "Triangle", "Textures" } {
+  TestMenu::TestMenu() : listbox_item_current(-1), currentTest(nullptr), testNames { "Clear Color", "Triangle", "Textures", "Circle" } {
   };
 
   TestMenu::~TestMenu() {
@@ -33,6 +33,7 @@ namespace test {
         testNames[0],
         testNames[1],
         testNames[2],
+        testNames[3],
       };
 
       switch (listbox_item_current) {
@@ -48,24 +49,10 @@ namespace test {
           currentTest = new TextureTest();
           break;
         }
-        /*
         case 3: {
           currentTest = new CircleTest();
           break;
         }
-        */
-        /*
-        case 5: {
-          currentTest = new OrthographicTest();
-          break;
-        }
-        */
-        /*
-        case 6: {
-          currentTest = new PerspectiveTest();
-          break;
-        }
-        */
       }
 
       ImGui::ListBox("Basic Tests\n", &listbox_item_current, listbox_items, IM_ARRAYSIZE(listbox_items), 5);

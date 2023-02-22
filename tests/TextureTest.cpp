@@ -26,10 +26,10 @@ namespace test {
     glm::mat4 ident = glm::mat4(1.0f);
     glm::vec3 trvec = glm::vec3(0, 0, 0);
     view = glm::translate(ident, trvec);
-    translationA = glm::vec3( 100,    0, 0);
-    translationB = glm::vec3(   0,  100, 0);
-    translationC = glm::vec3(   0,    0, 0);
-    translationD = glm::vec3(   100, 100, 0);
+    translationA = glm::vec3( 100,   0, 0);
+    translationB = glm::vec3(   0, 100, 0);
+    translationC = glm::vec3(   0,   0, 0);
+    translationD = glm::vec3( 100, 100, 0);
   }
 
   TextureTest::~TextureTest() {
